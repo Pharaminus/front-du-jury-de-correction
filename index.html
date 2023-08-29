@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jury correction</title>
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/style.css ">
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous"> -->
+</head>
+
+<body>
+  <section class="main-block container-fluid w-100 m-0">
+
+    <header class="w-100 entete1 p-0">
+      <p> ENTETE DE LA PAGE </p>
+    </header>
+    <header class="w-100 ">
+      <!-- ENTETE DE LA PAGE1 -->
+      <p> </p>
+    </header>
+    <main class="" id="block-main1">
+      <div class="row w-100 m-0">
+        <div class="block-main col-8" >
+          <!-- BLOCK PRINCIPALE -->
+          <div class="container-fluid pt-4">
+            <h3>Jury de correction</h3>
+          </div>
+          <div class="row w-100">
+            <!-- icone des membres du jury -->
+            <div class="col">
+              <div class="row" style="padding-left: 16%; margin-top: 3%;">
+                <div class="col p-0 m-0" style="text-align: left; ">
+                  <div class="cercle-icon-1"></div>
+                  <h6>President</h6>
+                </div>
+                <div class="col p-0 m-0" style="text-align: left; ">
+                  <div class="cercle-icon-2"></div>
+                  <h6 class="pe-5 me-5">Vice president</h6>
+                </div>
+                <div class="col p-0 m-0" style="text-align: left; ">
+                  <div class="cercle-icon-3"></div>
+                  <h6>Rapporteur</h6>
+                </div>
+                <div class="col p-0 m-0" style="text-align: left;">
+                  <div class="cercle-icon-4"></div>
+                  <h6>Membres </h6>
+                </div>
+              </div>
+              <!-- Barre de chargement -->
+              <div class=" h-50 " style="display: flex; flex-direction: row; align-items: center;">
+                <div class=" circle-load" id="circle-load1" style="background-color: rgb(83, 235, 119);"></div>
+                <div class=" line-load" id="line-load1" style=""></div>
+                <div class=" circle-load" id="circle-load2" style=""></div>
+                <div class=" line-load" id="line-load1"></div>
+                <div class=" circle-load" id="circle-load3"></div>
+                <div class=" line-load" id="line-load1"></div>
+                <div class=" circle-load" id="circle-load4"></div>
+              </div>
+            </div>
+
+          </div>
+          <!-- bouton demarere -->
+          
+          <div class="w-100 h-25 pt-5" id="bouton-dem-blck" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+            <button onclick="printFormSelectUe()"
+              style="border: solid 1px transparent; background-color: rgb(32, 101, 228); font-size: 20px; border-radius: 5px; color: aliceblue; box-shadow: 2px 2px 2px rgb(65, 64, 64); width: 20%; height: 30%;" id="bouton-dem">Demarer</button>
+          </div>
+
+          <!-- formulaire pour la selection de l'ue a modifier  -->
+          <div class="w-100 h-50 pt-5" id="form-check-ue">
+            <form class="check-ue" id="check-ue" action="#">
+              <div class="row py-2 ">
+                <div class="col-5"> <label class="me-4" for="matricule">Matricule</label><input type="text"
+                    name="matricule" id="matricule" placeholder="matricule"> </div>
+                <div class="col-5"><label class="me-4" for="ue">Ue</label><input type="text" name="ue" id="ue"
+                    placeholder="unite d'enseignement"></div>
+              </div>
+              <div class="row py-2">
+                <div class="col-5"> <label class="me-4" for="nom">Nom</label><input type="text" name="nom" id="nom"
+                    placeholder="nom de l'etudiant"> </div>
+                <div class="col-5"><label class="me-4" for="ue">UE</label><input type="text" name="ue" id="ue"></div>
+              </div>
+              <!-- bouton pour afficher la table de modification -->
+              <div class="w-100 pb-3" style="display: flex; flex-direction: row; justify-content: right;">
+                <button class="me-3"  onclick="printFormModif()" value="Valider"
+                  style="border: solid 1px transparent; background-color: rgb(32, 101, 228); font-size: 18px; border-radius: 5px; color: aliceblue; box-shadow: 1px 1px 1px rgb(65, 64, 64); width: 10%; height: 100%;">Valider</button>
+              </div>
+            </form>
+          </div>
+          <div class="w-100 form-recap" id="form-recap">
+            <table>
+              <tr class="line1">
+                <td class="coln">id</td>
+                <td class="coln">Num</td>
+                <td class="coln">Nom rapport</td>
+                <td class="coln">Date modif</td>
+                <td class="coln">Statut</td>
+                <td class="coln">Action</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>12</td>
+                <td>Rapport cc</td>
+                <td>2023-08-12</td>
+                <td>ok</td>
+                <td>Action</td>
+              </tr>
+            </table>
+            
+          </div>
+          <div class="w-100 form-modif p-5" id="form-modif" >
+            <table >
+              <tr>
+                <td>num</td>
+                <td>matricule</td>
+                <td>nom</td>
+                <td>Ano-CC</td>
+                <td>CC</td>
+                <td>Ano-EE</td>
+                <td>EE</td>
+                <td>Ano-EP</td>
+                <td>EP</td>
+                <td>Ano</td>
+                <td>New note</td>
+              </tr>
+            </table>
+            <div class="w-100 pb-3" style="display: flex; flex-direction: row; justify-content: right;">
+              <button class="me-3 mt-4"  onclick="printFormRecap()" value="Valider"
+                style="border: solid 1px transparent; background-color: rgb(32, 101, 228); font-size: 18px; border-radius: 5px; color: aliceblue; box-shadow: 1px 1px 1px rgb(65, 64, 64); width: 10%; height: 100%;">Valider</button>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class=" col-4 pt-4">
+          <div class="container-fluid lateral pt-5 ps-5" style="text-align: left;">
+            <!-- BLOCK LATERALE  -->
+            <h5>Seance jury</h5>
+            <div class="row container pt-3">
+              <div class="col-2">
+                <div class="cercle"></div>
+              </div>
+              <button class="col-10 filiere" style=" ">
+                <!-- <button class="w-100 h-25"> <h6>JURY ICT-L1</h6> </button> -->
+                <h6 onclick="test()">JURY ICT-L1</h6>
+              </button>
+            </div>
+            <div class="row container pt-3">
+              <div class="col-2">
+                <div class="cercle"></div>
+              </div>
+              <div class="col-10 filiere">
+                <h6>JURY ICT-L1</h6>
+              </div>
+            </div>
+            <div class="row container pt-3">
+              <div class="col-2">
+                <div class="cercle"></div>
+              </div>
+              <div class="col-10 filiere">
+                <h6>JURY ICT-L1</h6>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="w-100">
+      <h2>pied de page</h2>
+    </footer>
+  </section>
+  <script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/correction.js"></script>
+</body>
+
+</html>
