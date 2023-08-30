@@ -7,19 +7,19 @@ function printFormSelectUe(){
         // document.getElementById("bouton-dem").innerText = "New seance";
         document.getElementById("block-main1").style.height = "800px";
         // document.getElementsByName("main")[0].style.height = "800px";bouton-dem-blck
-        document.getElementById("circle-load2").style.backgroundColor = "rgb(83, 235, 119)";
-        document.getElementById("line-load1").style.backgroundColor = "rgb(83, 235, 119)";
+        document.getElementById("circle-load2").style.backgroundColor = "rgb(108, 32, 249)";
+        document.getElementById("line-load1").style.backgroundColor = "rgb(108, 32, 249)";
         document.getElementById("bouton-dem-blck").style.display = "none";
     }
 
     function printFormModif(){
 
-        
+        getInfoUe();
         document.getElementById("form-check-ue").style.display = "none";
         document.getElementById("form-modif").style.display = "block";
-        document.getElementById("button-blck").style.display = "none";
-        document.getElementById("circle-load3").style.backgroundColor = "rgb(83, 235, 119)";
-        document.getElementById("line-load2").style.backgroundColor = "rgb(83, 235, 119)";
+        // document.getElementById("button-blck").style.display = "none";
+        document.getElementById("circle-load3").style.backgroundColor = "rgb(108, 32, 249)";
+        document.getElementById("line-load2").style.backgroundColor = "rgb(108, 32, 249)";
         
     }
     
@@ -41,6 +41,13 @@ function maskForm(i){
 }
 
 
-function test(){
-    alert("ok");
+function getInfoUe(){   
+    let nom = document.getElementById("nom").value;
+    let matricule = document.getElementById("matricule").value;
+    let ue = document.getElementById("ue").value;
+    let eval = document.getElementById("eval").value;
+    
+
 }
+
+
